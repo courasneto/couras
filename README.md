@@ -136,6 +136,114 @@ Neuro-Symbolic AI · Rainbird · Knowledge Maps · Decision Intelligence · Expl
 
 ---
 
+## More Projects
+
+### 🔐 Fraud Detection System v3.0 — Real-Time Transaction Intelligence
+**Qintess / Rainbird AI — FinTech | 2025**
+
+Real-time **fraud detection** using **Rainbird AI Knowledge Maps** (FraudRisk v3.0) with multi-dimensional transaction analysis.
+
+- Multi-LLM analysis via **Ollama** (DeepSeek-R1, LLaMA 3.2) — AI-generated risk explanations in natural language
+- Risk scoring, fraud probability, evidence trees, and full audit trails
+- **Streamlit** dashboard with **Plotly** analytics — alert management and case history
+
+```
+Rainbird AI · Knowledge Maps · Decision Intelligence · Ollama · DeepSeek-R1 · Streamlit · Plotly · Explainable AI
+```
+
+---
+
+### 🏗️ TSRB Platform — AI-Assisted Azure Architecture Review Board
+**Qintess — Technology Consulting | 2025**
+
+Platform for reviewing Azure technical architectures with **AI assistance and RAG**, fully provisionable via **Terraform**.
+
+- **LangChain + FAISS RAG** — chatbot queries against previous architectural decisions
+- AI generates **Mermaid diagrams**, **Visio exports**, and **Terraform code** for Azure resources
+- **OpenTelemetry + Prometheus + Grafana** observability stack; **MinIO** local storage
+- CI/CD with GitHub Actions; architecture: **FastAPI + Streamlit + SQLite + FAISS**
+
+```
+FastAPI · Streamlit · LangChain · FAISS · RAG · Ollama · OpenAI · Terraform · Mermaid · Docker · Grafana
+```
+
+---
+
+### 🏛️ Government Decision Intelligence Platform — Public Sector AI
+**Ministry of Justice — PoC | 2025**
+
+Three integrated **Decision Intelligence PoCs** for the Brazilian public sector, using AI for transparent, auditable decisions.
+
+- **PoC 1 — SEI Process Prioritization**: AI-ranked government process queue with LLM justifications
+- **PoC 2 — Public Request Triage**: spaCy NLP for intent classification, entity extraction (agency, urgency), explainable automated responses
+- **PoC 3 — Procurement Risk Assessment**: detects price anomalies, low competition, and contractor history risks
+
+```
+Python · Streamlit · spaCy · OpenAI · Ollama · Decision Intelligence · Explainable AI · NLP
+```
+
+---
+
+### 🍽️ Nutri WhatsApp — Food Nutritional Analysis via AI + WhatsApp
+**DevNutri | 2025**
+
+WhatsApp bot that receives **food photos** and returns **AI-powered nutritional analysis** using multi-provider vision models.
+
+- **Node.js + Baileys** WhatsApp server — multi-provider AI vision: **OpenAI, Groq, Google**
+- **Streamlit** admin panel for user limit management, conversation monitoring, and session control
+- Python + Node.js hybrid stack; JSON-based async message coordination
+
+```
+Node.js · Baileys · OpenAI Vision · Groq · Google AI · Streamlit · Python
+```
+
+---
+
+### 🌿 Emagreser.pt — Nutrition CRM & Client Management SaaS
+**DevNutri | 2025**
+
+Full-stack **CRM and appointment management platform** for nutrition professionals, integrated with AI.
+
+- **React + TypeScript** frontend + **EspoCRM** backend integration via REST API
+- AI-powered features with **OpenAI / Anthropic / Ollama**; appointment scheduling, client profiles, progress tracking
+- Nutritional simulator, contract generation, calendar sync
+
+```
+React · TypeScript · EspoCRM · OpenAI · Anthropic · Ollama · PHP · SQL
+```
+
+---
+
+### ⚙️ FlowOne — Intelligent Modular Platform (RBAC + API + Admin)
+**DevNutri | 2025**
+
+Modular **private intelligence layer** connecting and orchestrating existing systems — production-grade backend with full RBAC.
+
+- **FastAPI** backend with RBAC, JWT auth, Alembic database migrations — **11/11 tests passing**
+- **Next.js 14 + Refine.dev** admin frontend with role-based access control
+- **Docker Compose** full stack — 77 unit + integration tests; TDD methodology
+
+```
+FastAPI · Python · Next.js 14 · Refine.dev · Alembic · Docker · PostgreSQL · RBAC · Pytest · TDD
+```
+
+---
+
+### 🔍 Studio BringTo — Inspection Management Dashboard
+**Qintess | 2025**
+
+Dual-stack web dashboard (**Streamlit + React**) for real-time **inspection management and monitoring** via BringTo API.
+
+- **Streamlit** version: session state management, API client, modular components
+- **React + Material-UI** version: Context API, React Router, Chart.js analytics, real-time monitoring
+- Full API integration with authentication, dashboard, and reporting
+
+```
+Streamlit · React · Material-UI · Chart.js · Axios · Context API · Python · Node.js
+```
+
+---
+
 ## Career Highlights
 
 | Metric | Value |
@@ -172,8 +280,13 @@ Neuro-Symbolic AI · Rainbird · Knowledge Maps · Decision Intelligence · Expl
 🎓 **Degree** in Analysis and Systems Development — Universidade Estácio de Sá
 
 📜 Rainbird Foundation (AI Decision Intelligence) · Scrum Foundation (SFPC) · Kanban Foundation (KIKF)  
-📜 Remote Work & Virtual Collaboration (RWVCPC) · Salesforce Certified Administrator  
-📜 Salesforce Dev Lifecycle & Deployment Architect · Salesforce Marketing Cloud Email Specialist
+📜 Remote Work & Virtual Collaboration (RWVCPC)
+
+**Salesforce — 7x Certified · Trailhead Ranger (154k+ points) · 9x Superbadges**
+
+📜 Salesforce Certified Administrator · Salesforce Certified Associate  
+📜 Salesforce Dev Lifecycle & Deployment Architect · Salesforce Sales Cloud Consultant  
+📜 Salesforce Experience Cloud Consultant · Salesforce Marketing Cloud Email Specialist
 
 ---
 
