@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Raimundo Couras - Data · AI · CRM Specialist</title>
+  <meta name="description" content="Senior Technology Professional specializing in Data Engineering, AI/RAG Systems, and CRM Platforms. 23+ years of experience.">
+  <meta name="keywords" content="Data Engineering, AI Engineer, CRM, Salesforce, RAG, Python, Database Migration">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- AOS Animation -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary: #149ddd;
+      --color-secondary: #f4845f;
+      --color-bg-dark: #040b14;
+      --color-bg-sidebar: #040b14;
+      --color-text-light: #ccc;
+      --color-heading: #173b6c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: #272829;
+      background: #f5f8fd;
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      color: #37b3ed;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ======= Header / Sidebar ======= */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 300px;
+      background: var(--color-bg-sidebar);
+      padding: 15px;
+      overflow-y: auto;
+      z-index: 9997;
+      transition: all 0.5s;
+    }
+
+    #header .profile {
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    #header .profile img {
+      width: 120px;
+      height: 120px;
+      border: 8px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    #header .profile .initials {
+      width: 120px;
+      height: 120px;
+      border: 8px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: 700;
+      color: #fff;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    }
+
+    #header .profile h1 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    #header .profile h2 {
+      font-size: 13px;
+      color: #6f7180;
+      font-weight: 400;
+    }
+
+    #header .social-links {
+      margin-top: 20px;
+    }
+
+    #header .social-links a {
+      font-size: 18px;
+      display: inline-block;
+      background: #212431;
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      border-radius: 50%;
+      margin: 0 5px;
+      transition: 0.3s;
+    }
+
+    #header .social-links a:hover {
+      background: var(--color-primary);
+    }
+
+    /* ======= Navigation ======= */
+    .nav-menu {
+      padding: 30px 0 0 0;
+    }
+
+    .nav-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav-menu > ul > li {
+      position: relative;
+    }
+
+    .nav-menu a,
+    .nav-menu a:focus {
+      display: flex;
+      align-items: center;
+      color: #a8a9b4;
+      padding: 10px 15px;
+      margin-bottom: 8px;
+      font-size: 15px;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .nav-menu a i {
+      font-size: 18px;
+      padding-right: 10px;
+      color: #6f7180;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active,
+    .nav-menu a.active:focus,
+    .nav-menu li:hover > a {
+      color: #fff;
+      background: #212431;
+    }
+
+    .nav-menu a:hover i,
+    .nav-menu a.active i {
+      color: var(--color-primary);
+    }
+
+    /* ======= Main Content ======= */
+    #main {
+      margin-left: 300px;
+    }
+
+    .section {
+      padding: 60px 30px;
+      overflow: hidden;
+    }
+
+    .section-title {
+      padding-bottom: 30px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-heading);
+      position: relative;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--color-primary);
+      left: 0;
+      bottom: 0;
+    }
+
+    .section-title p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* ======= Hero Section ======= */
+    #hero {
+      width: 100%;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80') center center;
+      background-size: cover;
+      position: relative;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(5, 13, 24, 0.85);
+    }
+
+    #hero .hero-container {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 50px;
+    }
+
+    #hero h1 {
+      font-size: 54px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    #hero h1 span {
+      color: var(--color-primary);
+    }
+
+    #hero p {
+      color: #ccc;
+      font-size: 22px;
+      margin-bottom: 30px;
+    }
+
+    #hero .typed-text {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    /* ======= About Section ======= */
+    .about-content {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-text p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .about-info {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about-info ul li {
+      padding: 10px 0;
+      display: flex;
+      font-size: 14px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .about-info ul li i {
+      color: var(--color-primary);
+      margin-right: 10px;
+      font-size: 16px;
+      width: 20px;
+    }
+
+    .about-info ul li strong {
+      margin-right: 8px;
+      color: #272829;
+    }
+
+    /* ======= Facts / Stats Section ======= */
+    .facts {
+      background: linear-gradient(135deg, var(--color-bg-dark) 0%, #0a1628 100%);
+      padding: 60px 30px;
+    }
+
+    .facts .section-title h2,
+    .facts .section-title p {
+      color: #fff;
+    }
+
+    .facts .section-title h2::after {
+      background: var(--color-secondary);
+    }
+
+    .count-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 30px 25px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .count-box:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-5px);
+    }
+
+    .count-box i {
+      display: block;
+      font-size: 36px;
+      color: var(--color-primary);
+      margin-bottom: 15px;
+    }
+
+    .count-box span {
+      font-size: 40px;
+      font-weight: 700;
+      color: #fff;
+      display: block;
+    }
+
+    .count-box p {
+      margin: 10px 0 0;
+      font-size: 14px;
+      color: #a8a9b4;
+    }
+
+    .facts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    /* ======= Skills Section ======= */
+    .skills-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .progress {
+      margin-bottom: 20px;
+    }
+
+    .progress .skill {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .progress .skill span {
+      font-weight: 600;
+      color: #272829;
+      font-size: 14px;
+    }
+
+    .progress .skill .val {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    .progress-bar-wrap {
+      background: #dce4ec;
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      border-radius: 5px;
+      transition: width 1s ease;
+    }
+
+    /* ======= Resume Section ======= */
+    .resume {
+      background: #fff;
+    }
+
+    .resume .resume-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-heading);
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e8f0f8;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .resume .resume-title i {
+      color: var(--color-primary);
+      font-size: 22px;
+    }
+
+    .resume .resume-item {
+      padding: 20px 25px;
+      margin-bottom: 15px;
+      background: #f8fafc;
+      border-radius: 10px;
+      border-left: 4px solid var(--color-primary);
+      transition: 0.3s;
+      position: relative;
+    }
+
+    .resume .resume-item:hover {
+      background: #f0f5fa;
+      transform: translateX(5px);
+    }
+
+    .resume .resume-item h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-heading);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .resume .resume-item h5 {
+      font-size: 12px;
+      background: var(--color-primary);
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .resume .resume-item .company {
+      font-size: 13px;
+      color: #5d6d7e;
+      font-weight: 500;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .resume .resume-item .company i {
+      color: var(--color-secondary);
+    }
+
+    .resume .resume-item p {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .resume .resume-item ul {
+      padding-left: 18px;
+      margin: 10px 0 0 0;
+      list-style: none;
+    }
+
+    .resume .resume-item ul li {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 6px;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    .resume .resume-item ul li::before {
+      content: "▸";
+      position: absolute;
+      left: 0;
+      color: var(--color-secondary);
+      font-size: 12px;
+    }
+
+    .resume-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .resume-row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .resume-col {
+      flex: 1;
+      min-width: 350px;
+    }
+
+    .resume-col-full {
+      width: 100%;
+    }
+
+    /* Education & Certs in smaller cards */
+    .edu-cert-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .edu-cert-box {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 25px;
+      border-top: 4px solid var(--color-secondary);
+    }
+
+    .edu-cert-box h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-heading);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .edu-cert-box h3 i {
+      color: var(--color-secondary);
+    }
+
+    .edu-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e8f0f8;
+    }
+
+    .edu-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .edu-item h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-heading);
+      margin-bottom: 5px;
+    }
+
+    .edu-item span {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .edu-item p {
+      font-size: 13px;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    /* ======= Portfolio Section ======= */
+    .portfolio {
+      background: #f5f8fd;
+    }
+
+    .portfolio-filters {
+      padding: 0;
+      margin: 0 0 25px 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    .portfolio-filters li {
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #555;
+      margin: 5px;
+      border-radius: 4px;
+      transition: 0.3s;
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .portfolio-filters li:hover,
+    .portfolio-filters li.active {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+    }
+
+    .portfolio-item {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+      border-left: 4px solid var(--color-primary);
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    .portfolio-item .portfolio-content {
+      padding: 25px;
+    }
+
+    .portfolio-item .portfolio-icon {
+      font-size: 36px;
+      color: var(--color-primary);
+      margin-bottom: 15px;
+    }
+
+    .portfolio-item h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-heading);
+      margin-bottom: 8px;
+    }
+
+    .portfolio-item .company {
+      font-size: 13px;
+      color: var(--color-primary);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .portfolio-item p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-item .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .portfolio-item .tag {
+      background: #e8f4fc;
+      color: var(--color-primary);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .portfolio-item .tag.highlight {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    /* ======= Services Section ======= */
+    .services {
+      background: #fff;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .service-box {
+      background: #f8fafc;
+      padding: 35px 25px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      border-bottom: 3px solid transparent;
+    }
+
+    .service-box:hover {
+      background: #fff;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      border-bottom-color: var(--color-primary);
+    }
+
+    .service-box i {
+      font-size: 48px;
+      color: var(--color-primary);
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .service-box h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-heading);
+      margin-bottom: 15px;
+    }
+
+    .service-box p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* ======= Contact Section ======= */
+    .contact {
+      background: linear-gradient(135deg, var(--color-bg-dark) 0%, #0a1628 100%);
+    }
+
+    .contact .section-title h2,
+    .contact .section-title p {
+      color: #fff;
+    }
+
+    .contact .section-title h2::after {
+      background: var(--color-secondary);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .contact-info {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .contact-info:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-5px);
+    }
+
+    .contact-info i {
+      font-size: 32px;
+      color: var(--color-primary);
+      margin-bottom: 15px;
+    }
+
+    .contact-info h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-info p,
+    .contact-info a {
+      font-size: 14px;
+      color: #a8a9b4;
+    }
+
+    .contact-info a:hover {
+      color: var(--color-primary);
+    }
+
+    /* ======= Footer ======= */
+    #footer {
+      padding: 30px;
+      background: #040b14;
+      color: #a8a9b4;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    #footer .credits {
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    #footer .credits a {
+      color: var(--color-primary);
+    }
+
+    /* ======= Certifications ======= */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .cert-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      background: #f8fafc;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .cert-item i {
+      color: var(--color-primary);
+      margin-right: 10px;
+      font-size: 18px;
+    }
+
+    /* ======= Tech Stack Badges ======= */
+    .tech-category {
+      margin-bottom: 30px;
+    }
+
+    .tech-category h4 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-heading);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e8f4fc;
+    }
+
+    .tech-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tech-badge {
+      background: linear-gradient(135deg, #e8f4fc 0%, #f0f7fc 100%);
+      color: var(--color-heading);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      border: 1px solid #dce8f3;
+      transition: 0.3s;
+    }
+
+    .tech-badge:hover {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+
+    /* ======= NEW Skills Grid ======= */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .skill-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      border-top: 4px solid var(--color-primary);
+      transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    .skill-card.ai { border-top-color: #8b5cf6; }
+    .skill-card.agents { border-top-color: #06b6d4; }
+    .skill-card.vector { border-top-color: #10b981; }
+    .skill-card.ml { border-top-color: #f59e0b; }
+    .skill-card.db { border-top-color: #ef4444; }
+    .skill-card.cloud { border-top-color: #3b82f6; }
+    .skill-card.backend { border-top-color: #6366f1; }
+    .skill-card.frontend { border-top-color: #ec4899; }
+    .skill-card.crm { border-top-color: #14b8a6; }
+
+    .skill-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .skill-card-header i {
+      font-size: 24px;
+      color: var(--color-primary);
+    }
+
+    .skill-card.ai .skill-card-header i { color: #8b5cf6; }
+    .skill-card.agents .skill-card-header i { color: #06b6d4; }
+    .skill-card.vector .skill-card-header i { color: #10b981; }
+    .skill-card.ml .skill-card-header i { color: #f59e0b; }
+    .skill-card.db .skill-card-header i { color: #ef4444; }
+    .skill-card.cloud .skill-card-header i { color: #3b82f6; }
+    .skill-card.backend .skill-card-header i { color: #6366f1; }
+    .skill-card.frontend .skill-card-header i { color: #ec4899; }
+    .skill-card.crm .skill-card-header i { color: #14b8a6; }
+
+    .skill-card-header h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-heading);
+      margin: 0;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .stag {
+      background: #f1f5f9;
+      color: #475569;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .stag:hover {
+      background: #e2e8f0;
+    }
+
+    .stag.hot {
+      background: linear-gradient(135deg, var(--color-primary) 0%, #0284c7 100%);
+      color: #fff;
+    }
+
+    /* ======= Certifications Grid ======= */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .cert-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #0284c7;
+      transition: 0.3s;
+    }
+
+    .cert-card:hover {
+      transform: translateX(5px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .cert-card.sf { border-left-color: #00a1e0; }
+    .cert-card.ai { border-left-color: #8b5cf6; }
+    .cert-card.agile { border-left-color: #10b981; }
+
+    .cert-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .cert-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, #00a1e0 0%, #0176d3 100%);
+      flex-shrink: 0;
+    }
+
+    .cert-logo.ai {
+      background: linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%);
+    }
+
+    .cert-logo.agile {
+      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    }
+
+    .cert-card-header h5 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-heading);
+      margin: 0 0 3px 0;
+      line-height: 1.3;
+    }
+
+    .cert-card-header span {
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    @media (max-width: 991px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .certs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .certs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ======= Mobile Toggle ======= */
+    .mobile-nav-toggle {
+      display: none;
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      width: 40px;
+      height: 40px;
+      background: var(--color-primary);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 9999;
+    }
+
+    /* ======= Responsive ======= */
+    @media (max-width: 991px) {
+      #header {
+        left: -300px;
+      }
+
+      #header.mobile-nav-active {
+        left: 0;
+      }
+
+      #main {
+        margin-left: 0;
+      }
+
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      #hero .hero-container {
+        padding: 0 30px;
+      }
+
+      #hero h1 {
+        font-size: 36px;
+      }
+
+      #hero p {
+        font-size: 18px;
+      }
+
+      .section {
+        padding: 40px 20px;
+      }
+
+      .resume-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 576px) {
+      #hero h1 {
+        font-size: 28px;
+      }
+
+      .section-title h2 {
+        font-size: 26px;
+      }
+
+      .count-box span {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button class="mobile-nav-toggle" onclick="toggleNav()">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <!-- ======= Header / Sidebar ======= -->
+  <header id="header">
+    <div class="profile">
+      <div class="initials">RC</div>
+      <h1>Raimundo Couras</h1>
+      <h2>Data · AI · CRM Specialist</h2>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/rcouras/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/courasneto" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="mailto:couras@gmail.com"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house"></i> Home</a></li>
+        <li><a href="#about"><i class="bi bi-person"></i> About</a></li>
+        <li><a href="#facts"><i class="bi bi-bar-chart"></i> Facts</a></li>
+        <li><a href="#skills"><i class="bi bi-gear"></i> Skills</a></li>
+        <li><a href="#resume"><i class="bi bi-file-text"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-briefcase"></i> Portfolio</a></li>
+        <li><a href="#services"><i class="bi bi-tools"></i> Services</a></li>
+        <li><a href="#contact"><i class="bi bi-chat"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+      <h1>I'm <span>Raimundo Couras</span></h1>
+      <p><span class="typed-text">Data Engineering</span> | <span class="typed-text">AI & RAG Systems</span> | <span class="typed-text">CRM Platforms</span></p>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="section">
+      <div class="section-title" data-aos="fade-up">
+        <h2>About Me</h2>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text" data-aos="fade-right">
+          <p>
+            I'm a technology professional with <strong>over 23 years of experience</strong> in data systems, 
+            CRM platforms, and more recently in <strong>Artificial Intelligence</strong> solutions. Throughout my career, 
+            I've led large-scale data migration projects — including the current migration of <strong>4.5 TB and 17 billion records</strong> 
+            from Oracle to Azure SQL — and delivered over <strong>45 enterprise projects</strong> across diverse industries.
+          </p>
+          <p>
+            I have a <strong>solutions architect mindset</strong> and enjoy proposing innovative approaches to complex problems. 
+            I'm naturally curious — always studying and keeping up with market trends, whether in RAG, LLMs, 
+            multi-agent systems, or new data architectures. I believe technology should solve real problems in a practical and scalable way.
+          </p>
+          <p>
+            I work well in teams and have <strong>led squads of up to 8 people</strong> on international projects. 
+            I value clear communication, quality documentation, and incremental deliveries. 
+            I hold <strong>7 Salesforce certifications</strong>, Decision Intelligence certification (Rainbird AI), 
+            plus Scrum and Kanban credentials. Available for remote or hybrid projects.
+          </p>
+        </div>
+
+        <div class="about-info" data-aos="fade-left">
+          <ul>
+            <li><i class="bi bi-geo-alt"></i> <strong>Location:</strong> Portugal (Remote)</li>
+            <li><i class="bi bi-briefcase"></i> <strong>Experience:</strong> 23+ Years</li>
+            <li><i class="bi bi-translate"></i> <strong>Languages:</strong> PT (Native), EN (Advanced), ES (Basic)</li>
+            <li><i class="bi bi-envelope"></i> <strong>Email:</strong> couras@gmail.com</li>
+            <li><i class="bi bi-phone"></i> <strong>Phone:</strong> +351 92 747 0108</li>
+            <li><i class="bi bi-linkedin"></i> <strong>LinkedIn:</strong> linkedin.com/in/rcouras</li>
+            <li><i class="bi bi-github"></i> <strong>GitHub:</strong> github.com/courasneto</li>
+            <li><i class="bi bi-check-circle"></i> <strong>Freelance:</strong> Available</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts section">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Career Highlights</h2>
+        <p>Numbers that define my journey</p>
+      </div>
+
+      <div class="facts-grid">
+        <div class="count-box" data-aos="fade-up" data-aos-delay="100">
+          <i class="bi bi-calendar-check"></i>
+          <span>23+</span>
+          <p>Years of Experience</p>
+        </div>
+
+        <div class="count-box" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-database"></i>
+          <span>4.5 TB</span>
+          <p>Data Migrated</p>
+        </div>
+
+        <div class="count-box" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-table"></i>
+          <span>17B</span>
+          <p>Records Processed</p>
+        </div>
+
+        <div class="count-box" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-robot"></i>
+          <span>1,100+</span>
+          <p>AI Agent Conversions</p>
+        </div>
+
+        <div class="count-box" data-aos="fade-up" data-aos-delay="500">
+          <i class="bi bi-folder"></i>
+          <span>45+</span>
+          <p>Enterprise Projects</p>
+        </div>
+
+        <div class="count-box" data-aos="fade-up" data-aos-delay="600">
+          <i class="bi bi-patch-check"></i>
+          <span>7×</span>
+          <p>Salesforce Certified</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Facts Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="section" style="background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Tech Stack</h2>
+        <p>Technologies and tools I use daily</p>
+      </div>
+
+      <!-- Skills Grid - New Design -->
+      <div class="skills-grid" data-aos="fade-up">
+        
+        <!-- AI & LLMs -->
+        <div class="skill-card ai">
+          <div class="skill-card-header">
+            <i class="bi bi-robot"></i>
+            <h4>AI & LLMs</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="stag hot">OpenAI GPT-4</span>
+            <span class="stag hot">Claude</span>
+            <span class="stag">Ollama</span>
+            <span class="stag">DeepSeek</span>
+            <span class="stag">Llama 3</span>
+            <span class="stag">Gemini</span>
+            <span class="stag">Mistral</span>
+            <span class="stag">Hugging Face</span>
+            <span class="stag">Groq</span>
+          </div>
+        </div>
+
+        <!-- Multi-Agent Frameworks -->
+        <div class="skill-card agents">
+          <div class="skill-card-header">
+            <i class="bi bi-diagram-3"></i>
+            <h4>Multi-Agent Frameworks</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="stag hot">CrewAI</span>
+            <span class="stag hot">LangGraph</span>
+            <span class="stag">AutoGen</span>
+            <span class="stag">LangChain</span>
+            <span class="stag">LlamaIndex</span>
+            <span class="stag">Semantic Kernel</span>
+            <span class="stag">Agency Swarm</span>
+            <span class="stag">Vanna AI</span>
+            <span class="stag">Rainbird AI</span>
+          </div>
+        </div>
+
+        <!-- Vector Databases -->
+        <div class="skill-card vector">
+          <div class="skill-card-header">
+            <i class="bi bi-collection"></i>
+            <h4>Vector Databases</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="stag hot">Qdrant</span>
+            <span class="stag hot">Pinecone</span>
+            <span class="stag">ChromaDB</span>
+            <span class="stag">Weaviate</span>
+            <span class="stag">Milvus</span>
+            <span class="stag">FAISS</span>
+            <span class="stag">pgvector</span>
+            <span class="stag">BM42 Hybrid</span>
+          </div>
+        </div>
+
+        <!-- ML & Data Science -->
+        <div class="skill-card ml">
+          <div class="skill-card-header">
+            <i class="bi bi-graph-up"></i>
+            <h4>ML & Data Science</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="stag hot">Python</span>
+            <span class="stag">PyTorch</span>
+            <span class="stag">Scikit-learn</span>
+            <span class="stag">Pandas</span>
+            <span class="stag">NumPy</span>
+            <span class="stag">Jupyter</span>
+            <span class="stag">YOLO</span>
+            <span class="stag">Transformers</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card db">
+          <div class="skill-card-header">
+            <i class="bi bi-database"></i>
+            <h4>Databases</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="stag hot">Oracle</span>
+            <span class="stag hot">SQL Server</span>
+            <span class="stag hot">PostgreSQL</span>
+            <span class="stag">Azure SQL MI</span>
+            <span class="stag">MySQL</span>
+            <span class="stag">MongoDB</span>
+            <span class="stag">CosmosDB</span>
+            <span class="stag">Redis</span>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-card cloud">
+          <div class="skill-card-header">
+            <i class="bi bi-cloud"></i>
+            <h4>Cloud & DevOps</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="stag hot">Azure</span>
+            <span class="stag hot">Docker</span>
+            <span class="stag">Azure DevOps</span>
+            <span class="stag">GitHub Actions</span>
+            <span class="stag">Terraform</span>
+            <span class="stag">SSMA</span>
+            <span class="stag">SSIS</span>
+            <span class="stag">Git</span>
+          </div>
+        </div>
+
+        <!-- Backend & APIs -->
+        <div class="skill-card backend">
+          <div class="skill-card-header">
+            <i class="bi bi-code-slash"></i>
+            <h4>Backend & APIs</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="stag hot">FastAPI</span>
+            <span class="stag hot">Python</span>
+            <span class="stag">Pydantic v2</span>
+            <span class="stag">SQLAlchemy 2.0</span>
+            <span class="stag">Node.js</span>
+            <span class="stag">REST APIs</span>
+            <span class="stag">PowerShell</span>
+            <span class="stag">Alembic</span>
+          </div>
+        </div>
+
+        <!-- Frontend & UI -->
+        <div class="skill-card frontend">
+          <div class="skill-card-header">
+            <i class="bi bi-window"></i>
+            <h4>Frontend & UI</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="stag hot">Streamlit</span>
+            <span class="stag">Gradio</span>
+            <span class="stag">React</span>
+            <span class="stag">Next.js</span>
+            <span class="stag">Plotly</span>
+            <span class="stag">Tailwind</span>
+            <span class="stag">HTML/CSS</span>
+          </div>
+        </div>
+
+        <!-- CRM & Enterprise -->
+        <div class="skill-card crm">
+          <div class="skill-card-header">
+            <i class="bi bi-people"></i>
+            <h4>CRM & Enterprise</h4>
+          </div>
+          <div class="skill-tags">
+            <span class="stag hot">Salesforce (7×)</span>
+            <span class="stag">Marketing Cloud</span>
+            <span class="stag">Sales Cloud</span>
+            <span class="stag">CPQ</span>
+            <span class="stag">CDP</span>
+            <span class="stag">TOTVS ERP</span>
+            <span class="stag">Gearset</span>
+            <span class="stag">VS Code</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Certifications Section -->
+      <div class="certs-section" data-aos="fade-up" style="margin-top: 50px;">
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--color-heading); margin-bottom: 25px; text-align: center;">
+          <i class="bi bi-patch-check" style="color: var(--color-primary); margin-right: 10px;"></i>
+          Certifications
+        </h3>
+        
+        <div class="certs-grid">
+          <!-- Salesforce Certs -->
+          <div class="cert-card sf">
+            <div class="cert-card-header">
+              <span class="cert-logo">SF</span>
+              <div>
+                <h5>Salesforce Certified Administrator</h5>
+                <span>Credential ID: 21847XXX · Mar 2019</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-card sf">
+            <div class="cert-card-header">
+              <span class="cert-logo">SF</span>
+              <div>
+                <h5>Salesforce Certified Associate</h5>
+                <span>Credential ID: 23156XXX · Sep 2023</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-card sf">
+            <div class="cert-card-header">
+              <span class="cert-logo">SF</span>
+              <div>
+                <h5>Salesforce Sales Cloud Consultant</h5>
+                <span>Credential ID: 22134XXX · Jun 2021</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-card sf">
+            <div class="cert-card-header">
+              <span class="cert-logo">SF</span>
+              <div>
+                <h5>Salesforce Experience Cloud Consultant</h5>
+                <span>Credential ID: 22567XXX · Aug 2021</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-card sf">
+            <div class="cert-card-header">
+              <span class="cert-logo">SF</span>
+              <div>
+                <h5>Salesforce Marketing Cloud Email Specialist</h5>
+                <span>Credential ID: 23012XXX · Feb 2023</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-card sf">
+            <div class="cert-card-header">
+              <span class="cert-logo">SF</span>
+              <div>
+                <h5>Salesforce Dev Lifecycle & Deployment Architect</h5>
+                <span>Credential ID: 22890XXX · Nov 2022</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Other Certs -->
+          <div class="cert-card ai">
+            <div class="cert-card-header">
+              <span class="cert-logo ai">AI</span>
+              <div>
+                <h5>Rainbird Foundation (Decision Intelligence)</h5>
+                <span>Rainbird AI · Jan 2025</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-card agile">
+            <div class="cert-card-header">
+              <span class="cert-logo agile">SC</span>
+              <div>
+                <h5>Scrum Foundation Professional (SFPC)</h5>
+                <span>CertiProf · 2020</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cert-card agile">
+            <div class="cert-card-header">
+              <span class="cert-logo agile">KB</span>
+              <div>
+                <h5>Kanban Foundation (KIKF)</h5>
+                <span>CertiProf · 2020</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <p style="text-align: center; margin-top: 20px; font-size: 14px; color: #666;">
+          <strong style="color: var(--color-primary);">Trailhead Ranger:</strong> 154k+ points · 9× Superbadges
+        </p>
+      </div>
+    </section>
+    <!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume section">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>23+ years building data systems, AI solutions, and CRM platforms</p>
+      </div>
+
+      <div class="resume-container">
+        <!-- Professional Experience -->
+        <h3 class="resume-title" data-aos="fade-up"><i class="bi bi-briefcase"></i> Professional Experience</h3>
+        
+        <div class="resume-row">
+          <div class="resume-col" data-aos="fade-up">
+            <div class="resume-item">
+              <h5>2025 – Present</h5>
+              <h4>AI Engineer & Database Migration Lead</h4>
+              <div class="company"><i class="bi bi-building"></i> BMTX Inc. — Fintech (USA) · Remote</div>
+              <ul>
+                <li>Led full <strong>Oracle → Azure SQL migration</strong>: 4.5 TB · 17 billion records · 26 schemas · ~30,000 objects</li>
+                <li>Built multi-agent AI pipeline (CrewAI) for automated PL/SQL → T-SQL conversion with self-correction loops</li>
+                <li>Developed automated validation, reconciliation, and dependency-analysis suite in Python + PowerShell</li>
+                <li>Applied SSMA for 81% of object conversion; AI agents resolved the remaining 19% of complex objects</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h5>Oct 2024 – Present</h5>
+              <h4>AI Engineer — RAG Pipelines & Decision Intelligence</h4>
+              <div class="company"><i class="bi bi-building"></i> Qintess — Technology Consulting · Remote</div>
+              <ul>
+                <li>Built 3 production systems: Enterprise Q&A (RAG) · Engineering Knowledge System (Hybrid Search + Vision LLM) · Decision Intelligence (Neuro-Symbolic AI)</li>
+                <li>Full-stack delivery: LangGraph + LlamaIndex + Qdrant + Docker Compose (5 services, GPU-accelerated)</li>
+                <li>Rainbird AI + DeepSeek for LGPD/PCI DSS-compliant chargeback analysis with audit trails</li>
+                <li>Production stack: FastAPI · Pydantic v2 · SQLAlchemy 2.0 · Docker · Streamlit · Gradio · React</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h5>Mar 2024 – Present</h5>
+              <h4>CRM & AI Practice Leader</h4>
+              <div class="company"><i class="bi bi-building"></i> Qintess — Technology Consulting · Remote</div>
+              <ul>
+                <li>Led the CRM and AI practice — evaluated technology approaches for enterprise clients</li>
+                <li>Created architecture proposals, pitch decks, and service offerings; managed vendor partnerships</li>
+                <li>Organised webinars and internal hackathons on AI and Data topics</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="resume-col" data-aos="fade-up" data-aos-delay="100">
+            <div class="resume-item">
+              <h5>May 2023 – Feb 2024</h5>
+              <h4>Salesforce Consultant & Data Migration Engineer</h4>
+              <div class="company"><i class="bi bi-building"></i> Banco Caixa Vida e Previdência @ Builders · Remote</div>
+              <ul>
+                <li>Migrated <strong>350M records</strong> and 6M characters of code between Salesforce orgs using Python ETL pipelines</li>
+                <li>800+ platform users; Led platform changes aligned with stakeholders</li>
+                <li>Scrum · Jira · Gearset · DevOps pipeline</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h5>Nov 2022 – May 2023</h5>
+              <h4>Data Integration & Marketing Cloud Consultant</h4>
+              <div class="company"><i class="bi bi-building"></i> Santander Totta & Altice/MEO @ Accenture Portugal</div>
+              <ul>
+                <li>Designed data integration pipelines between Marketing Cloud and CDP</li>
+                <li>Optimised SQL data structures — achieved <strong>20% increase</strong> in customer retention at Santander</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h5>Oct 2020 – Jul 2022</h5>
+              <h4>Salesforce Solution Engineer / Squad Leader</h4>
+              <div class="company"><i class="bi bi-building"></i> Cielo S.A. & V.TAL @ Accenture Brasil · Remote</div>
+              <ul>
+                <li>Led cross-functional squad (8+ members) — functional validation, CPQ pricing, product catalog configuration</li>
+                <li>Org setup, access control, and full metadata/data migration using Gearset + VS Code</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Earlier Experience -->
+        <h3 class="resume-title" data-aos="fade-up" style="margin-top: 40px;"><i class="bi bi-clock-history"></i> Earlier Experience</h3>
+        
+        <div class="resume-row">
+          <div class="resume-col" data-aos="fade-up">
+            <div class="resume-item">
+              <h5>Jan – Oct 2020</h5>
+              <h4>DBA & API Monitoring Analyst</h4>
+              <div class="company"><i class="bi bi-building"></i> Athena Saúde @ NEXT DIGITAL (Sensedia)</div>
+              <p>Database administration for Telemedicine project. Built monitoring system, integration data mappings, data quality validation, and real-time dashboards.</p>
+            </div>
+
+            <div class="resume-item">
+              <h5>Sep 2016 – Dec 2019</h5>
+              <h4>Functional Analyst / Solution Engineer / PO / PM</h4>
+              <div class="company"><i class="bi bi-building"></i> WingsIT @ Hapvida Saúde (~7M customers)</div>
+              <p>Managed Salesforce implementation for 7M customer base. Engineered pricing pipeline (Excel → Oracle → Salesforce). Architected scheduling and distribution modules. KPI dashboards for decision support.</p>
+            </div>
+
+            <div class="resume-item">
+              <h5>Apr 2015 – Apr 2016</h5>
+              <h4>Business Developer & Consultant</h4>
+              <div class="company"><i class="bi bi-building"></i> RCS Sistemas</div>
+              <p>Salesforce pre-sales specialist. Prepared POC presentations, architected solutions for new business. Crafted implementation proposals and project schedules.</p>
+            </div>
+          </div>
+
+          <div class="resume-col" data-aos="fade-up" data-aos-delay="100">
+            <div class="resume-item">
+              <h5>Jan 2011 – Jan 2015</h5>
+              <h4>Senior Systems Analyst</h4>
+              <div class="company"><i class="bi bi-building"></i> Nufarm Indústria Química e Farmacêutica S/A</div>
+              <p>Multi-country operations across South America. Selected and implemented Salesforce CRM as PM/Analyst. Led ETL data migration. Managed ERP TOTVS RM (Payroll, HR, Assets). SQL Server, MySQL.</p>
+            </div>
+
+            <div class="resume-item">
+              <h5>Sep 2006 – Jan 2011</h5>
+              <h4>Senior Business Analyst</h4>
+              <div class="company"><i class="bi bi-building"></i> TOTVS (45+ projects)</div>
+              <p>CRM and BI data solutions across 45+ projects. OLAP cubes, dashboards for decision support. Implemented Corpore.Net Portal. SQL Server DBA.</p>
+            </div>
+
+            <div class="resume-item">
+              <h5>Feb 2002 – Aug 2006</h5>
+              <h4>System Analyst / Business Analyst</h4>
+              <div class="company"><i class="bi bi-building"></i> Universidade Estácio de Sá / FIC</div>
+              <p>Business and systems analysis on TOTVS ERP. Sectors: Finance, Procurement, Inventory, Billing, HR, Education. Career foundation in systems and data analysis.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education & Certifications -->
+        <div class="edu-cert-row" data-aos="fade-up">
+          <div class="edu-cert-box">
+            <h3><i class="bi bi-mortarboard"></i> Education</h3>
+            <div class="edu-item">
+              <h4>Postgraduate — Administration & Systems Security</h4>
+              <span>Universidade Estácio de Sá · Feb 2003 – Dec 2005</span>
+            </div>
+            <div class="edu-item">
+              <h4>Degree — Analysis and Systems Development</h4>
+              <span>Universidade Estácio de Sá · Jan 2001 – Dec 2003</span>
+            </div>
+          </div>
+
+          <div class="edu-cert-box">
+            <h3><i class="bi bi-translate"></i> Languages</h3>
+            <div class="edu-item">
+              <p><strong>Portuguese:</strong> Native</p>
+              <p><strong>English:</strong> Advanced (Conversational)</p>
+              <p><strong>Spanish:</strong> Basic</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Featured projects showcasing AI, RAG, and Data Engineering expertise</p>
+      </div>
+
+      <ul class="portfolio-filters" data-aos="fade-up">
+        <li class="active" onclick="filterProjects('all')">All</li>
+        <li onclick="filterProjects('ai')">AI & Agents</li>
+        <li onclick="filterProjects('rag')">RAG Systems</li>
+        <li onclick="filterProjects('data')">Data Engineering</li>
+      </ul>
+
+      <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="portfolio-item" data-category="ai data" data-aos="fade-up">
+          <div class="portfolio-content">
+            <div class="portfolio-icon"><i class="bi bi-robot"></i></div>
+            <h4>Multi-Agent AI System — Automated Code Conversion</h4>
+            <div class="company">BMTX — Fintech (USA) | 2025</div>
+            <p>Autonomous multi-agent pipeline (CrewAI) that converts Oracle PL/SQL to T-SQL with integrated testing and self-correction. Processing 1,100+ complex objects.</p>
+            <div class="tags">
+              <span class="tag highlight">CrewAI</span>
+              <span class="tag">Composite AI</span>
+              <span class="tag">Knowledge Graphs</span>
+              <span class="tag">Python</span>
+              <span class="tag">Azure SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-item" data-category="rag" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-content">
+            <div class="portfolio-icon"><i class="bi bi-search"></i></div>
+            <h4>Production RAG System — Enterprise Knowledge</h4>
+            <div class="company">Qintess — Technology Consulting | Oct 2024</div>
+            <p>End-to-end RAG pipeline: PDF/document ingestion → text extraction (OCR) → chunking → embedding → vector storage → retrieval → LLM generation.</p>
+            <div class="tags">
+              <span class="tag highlight">RAG Pipelines</span>
+              <span class="tag">Qdrant</span>
+              <span class="tag">Pinecone</span>
+              <span class="tag">OpenAI</span>
+              <span class="tag">FastAPI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-item" data-category="rag ai" data-aos="fade-up" data-aos-delay="200">
+          <div class="portfolio-content">
+            <div class="portfolio-icon"><i class="bi bi-diagram-3"></i></div>
+            <h4>EKS — Engineering Knowledge System</h4>
+            <div class="company">Sinfomania — Industrial Engineering | 2025</div>
+            <p>Production RAG system for technical/CAD documents using Hybrid Search (dense embeddings + sparse BM42) and Vision LLM for engineering drawings.</p>
+            <div class="tags">
+              <span class="tag highlight">Hybrid Search</span>
+              <span class="tag">LangGraph</span>
+              <span class="tag">Vision LLM</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="portfolio-item" data-category="ai" data-aos="fade-up" data-aos-delay="300">
+          <div class="portfolio-content">
+            <div class="portfolio-icon"><i class="bi bi-shield-check"></i></div>
+            <h4>Reason — Decision Intelligence (Neuro-Symbolic AI)</h4>
+            <div class="company">Qintess / Rainbird AI — FinTech | 2025</div>
+            <p>Neuro-symbolic AI for financial chargeback analysis using Rainbird AI Knowledge Maps with 11 business factors, fuzzy logic, and probability-weighted inference.</p>
+            <div class="tags">
+              <span class="tag highlight">Neuro-Symbolic</span>
+              <span class="tag">Rainbird AI</span>
+              <span class="tag">Decision Intelligence</span>
+              <span class="tag">Explainable AI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="portfolio-item" data-category="ai" data-aos="fade-up" data-aos-delay="400">
+          <div class="portfolio-content">
+            <div class="portfolio-icon"><i class="bi bi-shield-lock"></i></div>
+            <h4>Fraud Detection System v3.0</h4>
+            <div class="company">Qintess / Rainbird AI — FinTech | 2025</div>
+            <p>Real-time fraud detection using Rainbird AI Knowledge Maps with multi-dimensional transaction analysis. Multi-LLM analysis via Ollama (DeepSeek-R1, LLaMA 3.2).</p>
+            <div class="tags">
+              <span class="tag highlight">Rainbird AI</span>
+              <span class="tag">DeepSeek-R1</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Plotly</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="portfolio-item" data-category="rag ai" data-aos="fade-up" data-aos-delay="500">
+          <div class="portfolio-content">
+            <div class="portfolio-icon"><i class="bi bi-building"></i></div>
+            <h4>TSRB Platform — AI-Assisted Azure Architecture</h4>
+            <div class="company">Qintess — Technology Consulting | 2025</div>
+            <p>Platform for reviewing Azure architectures with AI assistance and RAG. LangChain + FAISS RAG chatbot. AI generates Mermaid diagrams and Terraform code.</p>
+            <div class="tags">
+              <span class="tag highlight">LangChain</span>
+              <span class="tag">FAISS</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">FastAPI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="portfolio-item" data-category="ai" data-aos="fade-up" data-aos-delay="600">
+          <div class="portfolio-content">
+            <div class="portfolio-icon"><i class="bi bi-bank"></i></div>
+            <h4>Government Decision Intelligence Platform</h4>
+            <div class="company">Ministry of Justice — PoC | 2025</div>
+            <p>Three integrated Decision Intelligence PoCs for the Brazilian public sector: SEI Process Prioritization, Public Request Triage, and Procurement Risk Assessment.</p>
+            <div class="tags">
+              <span class="tag highlight">NLP</span>
+              <span class="tag">spaCy</span>
+              <span class="tag">Decision Intelligence</span>
+              <span class="tag">Streamlit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="portfolio-item" data-category="data" data-aos="fade-up" data-aos-delay="700">
+          <div class="portfolio-content">
+            <div class="portfolio-icon"><i class="bi bi-gear-wide-connected"></i></div>
+            <h4>FlowOne — Intelligent Modular Platform</h4>
+            <div class="company">DevNutri | 2025</div>
+            <p>Modular private intelligence layer connecting systems. FastAPI backend with RBAC, JWT auth, Alembic migrations. Next.js 14 + Refine.dev admin frontend.</p>
+            <div class="tags">
+              <span class="tag highlight">FastAPI</span>
+              <span class="tag">Next.js 14</span>
+              <span class="tag">RBAC</span>
+              <span class="tag">TDD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>End-to-end AI and data services tailored to your business challenges</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-box" data-aos="fade-up">
+          <i class="bi bi-robot"></i>
+          <h4>RAG Pipeline Development</h4>
+          <p>End-to-end Retrieval-Augmented Generation systems: document ingestion, embedding, vector storage, retrieval, and LLM generation.</p>
+        </div>
+
+        <div class="service-box" data-aos="fade-up" data-aos-delay="100">
+          <i class="bi bi-diagram-3"></i>
+          <h4>Multi-Agent AI Systems</h4>
+          <p>Autonomous agent pipelines using CrewAI, LangGraph, and AutoGen for complex automation workflows with self-correction.</p>
+        </div>
+
+        <div class="service-box" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-database-gear"></i>
+          <h4>Database Migration</h4>
+          <p>Large-scale database migrations (Oracle → SQL Server/Azure SQL) with automated validation and reconciliation.</p>
+        </div>
+
+        <div class="service-box" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-lightbulb"></i>
+          <h4>Decision Intelligence</h4>
+          <p>Neuro-symbolic AI systems using Rainbird AI for explainable, auditable decision-making in regulated industries.</p>
+        </div>
+
+        <div class="service-box" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-graph-up"></i>
+          <h4>Data Engineering & ETL</h4>
+          <p>Scalable data pipelines, ETL processes, and data quality frameworks for enterprise data management.</p>
+        </div>
+
+        <div class="service-box" data-aos="fade-up" data-aos-delay="500">
+          <i class="bi bi-cloud"></i>
+          <h4>CRM & Salesforce</h4>
+          <p>Salesforce implementation, data migration, and integration with 7× certifications and 45+ enterprise projects.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section">
+      <div class="section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Interested in working together? Let's connect!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-up">
+          <i class="bi bi-geo-alt"></i>
+          <h4>Location</h4>
+          <p>Portugal (Remote-friendly worldwide)</p>
+        </div>
+
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+          <i class="bi bi-envelope"></i>
+          <h4>Email</h4>
+          <a href="mailto:couras@gmail.com">couras@gmail.com</a>
+        </div>
+
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-linkedin"></i>
+          <h4>LinkedIn</h4>
+          <a href="https://linkedin.com/in/rcouras" target="_blank">linkedin.com/in/rcouras</a>
+        </div>
+
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-github"></i>
+          <h4>GitHub</h4>
+          <a href="https://github.com/courasneto" target="_blank">github.com/courasneto</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact Section -->
+
+  </main>
+  <!-- End Main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <p>Building AI systems that are trustworthy, explainable, and production-ready.</p>
+      <div class="credits">
+        © 2026 Raimundo Couras. Template inspired by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <!-- AOS Animation JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Mobile nav toggle
+    function toggleNav() {
+      document.getElementById('header').classList.toggle('mobile-nav-active');
+    }
+
+    // Close mobile nav when clicking a link
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('header').classList.remove('mobile-nav-active');
+      });
+    });
+
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').substring(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Portfolio filter
+    function filterProjects(category) {
+      const items = document.querySelectorAll('.portfolio-item');
+      const filters = document.querySelectorAll('.portfolio-filters li');
+
+      filters.forEach(f => f.classList.remove('active'));
+      event.target.classList.add('active');
+
+      items.forEach(item => {
+        if (category === 'all' || item.dataset.category.includes(category)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
