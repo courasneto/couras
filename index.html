@@ -265,6 +265,14 @@
     #hero .typed {
       color: var(--color-primary);
       font-weight: 600;
+      font-size: 22px;
+    }
+
+    #hero .hero-typed {
+      color: #ccc;
+      font-size: 22px;
+      margin-bottom: 30px;
+      min-height: 35px;
     }
 
     #hero .typed-cursor {
@@ -1184,17 +1192,7 @@
   <section id="hero">
     <div class="hero-container" data-aos="fade-up">
       <h1>I'm <span>Raimundo Couras</span></h1>
-      <p>
-        <span id="typed-strings">
-          <span>AI Engineer &mdash; RAG Pipelines &amp; Multi-Agent Systems</span>
-          <span>LangGraph &middot; LlamaIndex &middot; CrewAI &middot; LangChain</span>
-          <span>Knowledge Graphs &middot; Decision Intelligence</span>
-          <span>Data Engineering &middot; ETL &middot; Azure SQL &middot; Oracle</span>
-          <span>CRM &middot; Salesforce &middot; HubSpot &middot; SugarCRM</span>
-          <span>Vector Databases &middot; Qdrant &middot; Pinecone &middot; ChromaDB</span>
-        </span>
-        <span class="typed"></span><span class="typed-cursor">|</span>
-      </p>
+      <p class="hero-typed"><span class="typed"></span><span class="typed-cursor">|</span></p>
     </div>
   </section>
   <!-- End Hero -->
@@ -2166,32 +2164,39 @@
       });
     });
 
-    // Typed.js effect
+    // Typed.js effect - types one phrase, pauses, erases, types next
     (function() {
       const strings = [
-        'AI Engineer &mdash; RAG Pipelines &amp; Multi-Agent Systems',
-        'LangGraph &middot; LlamaIndex &middot; CrewAI &middot; LangChain',
-        'Knowledge Graphs &middot; Decision Intelligence',
-        'Data Engineering &middot; ETL &middot; Azure SQL &middot; Oracle',
-        'CRM &middot; Salesforce &middot; HubSpot &middot; SugarCRM',
-        'Vector Databases &middot; Qdrant &middot; Pinecone &middot; ChromaDB'
+        'AI Engineer \u2014 RAG Pipelines & Multi-Agent Systems',
+        'LangGraph \u00b7 LlamaIndex \u00b7 CrewAI \u00b7 LangChain',
+        'Knowledge Graphs \u00b7 Decision Intelligence \u00b7 Neuro-Symbolic',
+        'Data Engineering \u00b7 ETL \u00b7 Azure SQL \u00b7 Oracle \u00b7 PostgreSQL',
+        'CRM \u00b7 Salesforce (7\u00d7) \u00b7 HubSpot \u00b7 SugarCRM',
+        'Vector Databases \u00b7 Qdrant \u00b7 Pinecone \u00b7 ChromaDB'
       ];
       const el = document.querySelector('.typed');
       if (!el) return;
-      let si = 0, ci = 0, deleting = false, pausing = false;
+      let si = 0, ci = 0, deleting = false;
       function tick() {
         const full = strings[si];
-        if (pausing) { pausing = false; setTimeout(tick, deleting ? 60 : 1800); return; }
         if (!deleting) {
-          el.innerHTML = full.substring(0, ci + 1);
           ci++;
-          if (ci === full.length) { pausing = true; deleting = true; }
-          setTimeout(tick, 50);
+          el.textContent = full.substring(0, ci);
+          if (ci >= full.length) {
+            setTimeout(function(){ deleting = true; tick(); }, 2000);
+            return;
+          }
+          setTimeout(tick, 60);
         } else {
-          el.innerHTML = full.substring(0, ci - 1);
           ci--;
-          if (ci === 0) { deleting = false; pausing = true; si = (si + 1) % strings.length; }
-          setTimeout(tick, 30);
+          el.textContent = full.substring(0, ci);
+          if (ci <= 0) {
+            deleting = false;
+            si = (si + 1) % strings.length;
+            setTimeout(tick, 400);
+            return;
+          }
+          setTimeout(tick, 35);
         }
       }
       tick();
