@@ -262,10 +262,24 @@
       margin-bottom: 30px;
     }
 
-    #hero .typed-text {
+    #hero .typed {
       color: var(--color-primary);
       font-weight: 600;
     }
+
+    #hero .typed-cursor {
+      color: var(--color-primary);
+      font-weight: 300;
+      font-size: 26px;
+      animation: blink 0.8s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    #typed-strings { display: none; }
 
     /* ======= About Section ======= */
     .about-content {
@@ -1170,7 +1184,17 @@
   <section id="hero">
     <div class="hero-container" data-aos="fade-up">
       <h1>I'm <span>Raimundo Couras</span></h1>
-      <p><span class="typed-text">Data Engineering</span> | <span class="typed-text">AI & RAG Systems</span> | <span class="typed-text">CRM Platforms</span></p>
+      <p>
+        <span id="typed-strings">
+          <span>AI Engineer &mdash; RAG Pipelines &amp; Multi-Agent Systems</span>
+          <span>LangGraph &middot; LlamaIndex &middot; CrewAI &middot; LangChain</span>
+          <span>Knowledge Graphs &middot; Decision Intelligence</span>
+          <span>Data Engineering &middot; ETL &middot; Azure SQL &middot; Oracle</span>
+          <span>CRM &middot; Salesforce &middot; HubSpot &middot; SugarCRM</span>
+          <span>Vector Databases &middot; Qdrant &middot; Pinecone &middot; ChromaDB</span>
+        </span>
+        <span class="typed"></span><span class="typed-cursor">|</span>
+      </p>
     </div>
   </section>
   <!-- End Hero -->
@@ -2141,6 +2165,37 @@
         }
       });
     });
+
+    // Typed.js effect
+    (function() {
+      const strings = [
+        'AI Engineer &mdash; RAG Pipelines &amp; Multi-Agent Systems',
+        'LangGraph &middot; LlamaIndex &middot; CrewAI &middot; LangChain',
+        'Knowledge Graphs &middot; Decision Intelligence',
+        'Data Engineering &middot; ETL &middot; Azure SQL &middot; Oracle',
+        'CRM &middot; Salesforce &middot; HubSpot &middot; SugarCRM',
+        'Vector Databases &middot; Qdrant &middot; Pinecone &middot; ChromaDB'
+      ];
+      const el = document.querySelector('.typed');
+      if (!el) return;
+      let si = 0, ci = 0, deleting = false, pausing = false;
+      function tick() {
+        const full = strings[si];
+        if (pausing) { pausing = false; setTimeout(tick, deleting ? 60 : 1800); return; }
+        if (!deleting) {
+          el.innerHTML = full.substring(0, ci + 1);
+          ci++;
+          if (ci === full.length) { pausing = true; deleting = true; }
+          setTimeout(tick, 50);
+        } else {
+          el.innerHTML = full.substring(0, ci - 1);
+          ci--;
+          if (ci === 0) { deleting = false; pausing = true; si = (si + 1) % strings.length; }
+          setTimeout(tick, 30);
+        }
+      }
+      tick();
+    })();
 
     // Portfolio filter
     function filterProjects(category) {
